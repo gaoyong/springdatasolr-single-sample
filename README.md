@@ -1,0 +1,1 @@
+# springdatasolr-single-sample
