@@ -9,7 +9,7 @@ import org.springframework.data.solr.core.mapping.SolrDocument;
  * @author gaoyong
  *
  */
-//@SolrDocument(solrCoreName = "test")
+@SolrDocument(solrCoreName = "test")
 public class Book {
 	
 	@Id

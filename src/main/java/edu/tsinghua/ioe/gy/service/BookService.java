@@ -1,5 +1,7 @@
 package edu.tsinghua.ioe.gy.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
@@ -28,7 +30,13 @@ public class BookService {
 		return customBookRepository.findProductsByCustom(id);
 	}
 	
-	public Page<Book> findByName (String name){
+	public List<Book> findByName (String name){
+//		return bookRepository.findByName(name);
+//		return bookRepository.findByNameContains(name);
+		return bookRepository.findByQueryAnnotation(name);
+	}
+	
+	public Page<Book> customFindByName (String name){
 		return customBookRepository.findProductsByCustomName(name);
 	}
 
